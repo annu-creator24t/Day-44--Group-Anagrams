@@ -1,0 +1,53 @@
+import java.util.HashMap;
+
+class Solution {
+    public boolean wordPattern(String pattern, String s) {
+        String[] arr = s.split(" ");
+        
+        if (pattern.length() != arr.length) {
+            return false;
+        }
+        
+        HashMap<Character, String> hm = new HashMap<>();
+        
+        for (int i = 0; i < pattern.length(); i++) {
+            char ch = pattern.charAt(i);
+            boolean containKey = hm.containsKey(ch);
+            
+            if (containKey) {
+                if (!hm.get(ch).equals(arr[iimport java.util.*;
+
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        if (strs == null || strs.length == 0)
+            return new ArrayList<>();
+
+        Map<String, List<String>> map = new HashMap<>();
+        for (String s : strs) {
+            char[] arr = s.toCharArray();
+            Arrays.sort(arr);
+            String key = String.valueOf(arr);
+
+            if (!map.containsKey(key))
+                map.put(key, new ArrayList<>());
+
+            map.get(key).add(s);
+        }
+
+        return new ArrayList<>(map.values());
+    }
+}
+])) {
+                    return false;
+                }
+            } else {
+             
+                if (hm.containsValue(arr[i])) {
+                    return false;
+                }
+                hm.put(ch, arr[i]);
+            }
+        }
+        return true;
+    }
+}
